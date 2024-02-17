@@ -55,7 +55,7 @@
     border-radius: .5rem;
     white-space: nowrap;
     width: fit-content;
-    margin-left: calc(3em *  var(--i));
+    transform: translateX(calc(3em * var(--i)));
   }
   .bottom{
     display: flex;
@@ -71,8 +71,7 @@
     border-radius: 1rem;
     margin-bottom: 1em;
     color: white;
-    height: min-content;
-    margin-top: calc(1em * var(--j));
+    transform: translateY(calc(1em * var(--j)));
   }
   .buyer .buyer_info{
     display: flex;
@@ -93,7 +92,7 @@
   }
   .buyer > p{
     font-size: 0.9rem;
-    width: 33ch;
+    width: 35ch;
     line-height: 1.5em;
     max-lines: 4;
     padding-left: 1em;
@@ -121,10 +120,12 @@
       min-width: fit-content;
     }
     .ratings p{
-      margin-left: 0;
+      transform: none;
       width: auto;
       flex-direction: column;
       justify-content: center;
-      
+    }
+    .bottom .buyer{
+      transform: none;
     }
   }
