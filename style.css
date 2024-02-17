@@ -1,0 +1,130 @@
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+  }
+  body{
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    background: url(images/bg-pattern-top-desktop.svg) 0%  0% no-repeat, url(images/bg-pattern-bottom-desktop.svg) 100% 100% no-repeat;
+    min-height: 100vh;
+  }
+  main{
+    padding: 4.8em 2em;
+    margin: auto;
+    max-width: 70em;
+  }
+  .top{
+    margin-bottom: 3.8em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    column-gap: 3em;
+  }
+  .top > div{
+    flex: 1;
+  }
+  .hero h1{
+    font-size: 3.2rem;
+    margin-bottom: .5em;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    max-width: 15ch;
+    line-height: 100%;
+  }
+  .hero p{
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 500;
+    max-width: 45ch;
+    line-height: 150%;
+  }
+  
+  .ratings p{
+    --i: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2em;
+    background-color: var(--Light-Grayish-Magenta);
+    color: var(--Very-Dark-Magenta);
+    padding: 1.2em 2em;
+    font-weight: bold;
+    margin-bottom: 1.2em;
+    border-radius: .5rem;
+    white-space: nowrap;
+    width: fit-content;
+    margin-left: calc(3em *  var(--i));
+  }
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .buyer{
+    flex: 1;
+    --j: 0;
+    background-color: var(--Very-Dark-Magenta);
+    padding: 1.4em;
+    border-radius: 1rem;
+    margin-bottom: 1em;
+    color: white;
+    height: fit-content;
+    margin-top: calc(1em * var(--j));
+  }
+  .buyer .buyer_info{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .buyer .buyer_info svg{
+    height: 45px;
+    stroke: white;
+  }
+  .buyer .buyer_info p{
+    color: var(--Soft-Pink);
+  }
+  .buyer .buyer_info p span{
+    display: block;
+    color: white;
+    font-weight: 700;
+  }
+  .buyer > p{
+    font-size: 0.9rem;
+    max-width: 33ch;
+    line-height: 1.5em;
+    max-lines: 4;
+    padding-left: 1em;
+  }
+  @media screen and (max-width: 75em) {
+    body{
+    background: url(images/bg-pattern-top-mobile.svg) 0%  0% no-repeat, url(images/bg-pattern-bottom-mobile.svg) 100% 100% no-repeat;
+
+    }
+    .top, .bottom{
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1em;
+
+    }
+    .top{
+      text-align: center;
+    }
+    .hero h1{
+      font-size: 2.2rem;
+      margin: auto;
+    }
+    .ratings {
+      width: 60%;
+      min-width: fit-content;
+    }
+    .ratings p{
+      margin-left: 0;
+      width: auto;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+  }
